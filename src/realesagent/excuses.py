@@ -2,6 +2,14 @@ import random
 
 
 def generate_excuse(assignment):
+    if not isinstance(assignment, str):
+        raise TypeError("Assignment must be a string")
+
+    assignment = assignment.strip()
+
+    if not assignment:
+        raise ValueError("Assignment cannot be empty")
+
     excuses = [
         "My laptop broke down from the academic pressure. Honestly, I think we both need an extension.",
         f"The internet stopped working right when I was about to submit {assignment}. I believe this was a targeted attack.",
@@ -61,6 +69,14 @@ def apology_multiplier(email, desperation):
 
 
 def absence_excuse(class_name):
+    if not isinstance(class_name, str):
+        raise TypeError("Class name must be a string")
+
+    class_name = class_name.strip()
+
+    if not class_name:
+        raise ValueError("Class name cannot be empty")
+
     absence_excuses = [
         "I meant to come to class, but my morning unraveled before I could pull it back together.",
         "I woke up convinced I still had time, which was honestly the most confident mistake I made all day.",
