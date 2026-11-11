@@ -8,17 +8,36 @@ def section(title):
 if __name__ == "__main__":
     # Student: grade 90, 7 missing assignments, deadline in 36 hours, internet "failed"
     section("Student")
-    print("Desperation level:", student.desperation_level(grade=90, hours_until_deadline=36, missing_assignments=7))
-    print("Already late:", student.desperation_level(grade=40, hours_until_deadline=0, missing_assignments=2))
-    print(student.professionalize(truth="My internet connectivity failed and I was too lazy to do anything about it."))
+    print(
+        "Desperation level:",
+        student.desperation_level(
+            grade=90, hours_until_deadline=36, missing_assignments=7
+        ),
+    )
+    print(
+        "Already late:",
+        student.desperation_level(
+            grade=40, hours_until_deadline=0, missing_assignments=2
+        ),
+    )
+    print(
+        student.professionalize(
+            truth="My internet connectivity failed and I was too lazy to do anything about it."
+        )
+    )
     print(student.professionalize(truth="I overslept."))
 
     # Excuses: excuse for a project, grade-begging email, then an apology on top
     section("Excuses")
     print(excuses.generate_excuse(assignment="Web Development Project"))
-    email = excuses.grade_beg(current_grade=70, desired_grade=100, professor_name="John Smith")
+    email = excuses.grade_beg(
+        current_grade=70, desired_grade=100, professor_name="John Smith"
+    )
     print("\n===== Grade request ======\n" + email)
-    print("\n===== With apology (desperation 7) =====\n" + excuses.apology_multiplier(email=email, desperation=7))
+    print(
+        "\n===== With apology (desperation 7) =====\n"
+        + excuses.apology_multiplier(email=email, desperation=7)
+    )
     print("\n====== Absence excuse =====")
     print(excuses.absence_excuse(class_name="Operating Systems"))
     # Emails: subject lines at every urgency, extension requests at different lateness

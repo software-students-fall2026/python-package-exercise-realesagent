@@ -1,5 +1,5 @@
 def professor_reply(email, tone="strict"):
-   
+
     if not isinstance(email, str):
         raise TypeError("email must be a string")
     if not isinstance(tone, str):
