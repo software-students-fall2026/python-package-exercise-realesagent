@@ -10,4 +10,3 @@ realesagent = {file = ".", editable = true}
 build = "*"
 twine = "*"
 pytest = "*"
-black = "*"
