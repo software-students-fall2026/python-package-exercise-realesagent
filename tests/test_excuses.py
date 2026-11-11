@@ -3,7 +3,7 @@ from realesagent.excuses import (
     generate_excuse,
     grade_beg,
     apology_multiplier,
-    absence_excuse
+    absence_excuse,
 )
 
 
